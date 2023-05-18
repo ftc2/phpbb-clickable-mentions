@@ -1,0 +1,18 @@
+{
+  "stable": {
+    "3.2": {
+      "current": "1.0.5-00c",
+      "download": "https://github.com/ftc2/phpbb-clickable-mentions/releases",
+      "announcement": "https://github.com/ftc2/phpbb-clickable-mentions",
+      "eol": null,
+      "security": false
+    },
+    "3.3": {
+      "current": "2.0.0-00c",
+      "download": "https://github.com/ftc2/phpbb-clickable-mentions/releases",
+      "announcement": "https://github.com/ftc2/phpbb-clickable-mentions",
+      "eol": null,
+      "security": false
+    }
+  }
+}

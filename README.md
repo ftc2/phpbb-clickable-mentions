@@ -1,27 +1,45 @@
-# phpBB mentions
+# Clickable Mentions
+
+*A fork of [paul999/mention](https://github.com/paul999/mention) with common-sense improvements -_-*
+
+For reasons unfathomable, basic features like creating a link to a mentioned user's profile are not implemented upstream.
+
+For reasons *beyond* unfathomable, I am supporting this even though I don't care about phpBB.
+
+Yeah, yeah – you're welcome.
 
 ## Installation
 
-Copy the extension to phpBB/ext/paul999/mention
+Copy these files to `phpBB3/ext/paul999/mention`. Be sure to use the correct version of the extension for your version of phpBB.
 
-Go to "ACP" > "Customise" > "Extensions" and enable the "phpBB mentions" extension.
+### phpBB 3.2
 
-**Please note that this extension requires phpBB 3.3 and at least php 7.1! 
-The extension has only been tested with PHP7.1, 7.2, 7.3 7,4 and 8.0.
-If you use phpBB 3.2, you should use 1.0.x instead.**
+Use v1 of this extension:
+```bash
+git clone -b v1 https://github.com/ftc2/phpbb-clickable-mentions.git /path/to/phpBB3/ext/paul999/mention
+```
 
-## Tests and Continuous Integration
+### phpBB 3.3
 
-We use Travis-CI as a continuous integration server and phpunit for our unit testing. See more information on the [phpBB development wiki](https://wiki.phpbb.com/Unit_Tests).
-To run the tests locally, you need to install phpBB from its Git repository. Afterwards run the following command from the phpBB Git repository's root:
+Use v2 of this extension:
+```bash
+git clone -b v2 https://github.com/ftc2/phpbb-clickable-mentions.git /path/to/phpBB3/ext/paul999/mention
+```
 
-Windows:
+## Upgrading
 
-    phpBB\vendor\bin\phpunit.bat -c phpBB\ext\paul999\mention\phpunit.xml.dist
+```bash
+cd /path/to/phpBB3/ext/paul999/mention
+git pull
+```
 
-others:
+If you upgrade from phpBB 3.2 -> 3.3, I believe switching from v1 to v2 of the extension should "just work".
 
-    phpBB/vendor/bin/phpunit -c phpBB/ext/paul999/mention/phpunit.xml.dist
+```bash
+cd /path/to/phpBB3/ext/paul999/mention
+git pull
+git switch v2
+```
 
 ## License
 

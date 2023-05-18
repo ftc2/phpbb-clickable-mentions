@@ -122,7 +122,12 @@ class main_listener implements EventSubscriberInterface
 		$configurator = $event['configurator'];
 		$configurator->BBCodes->addCustom(
 			'[smention u={NUMBER?} g={NUMBER?}]{TEXT}[/smention]',
-			'<em class="mention">@{TEXT}</em>'
+'<xsl:choose>
+	<xsl:when test="@u">
+		<a href="./memberlist.php?mode=viewprofile&u={@u}"><em class="mention">@{TEXT}</em></a>
+	</xsl:when>
+	<xsl:otherwise><em class="mention">@{TEXT}</em></xsl:otherwise>
+</xsl:choose>'
 		);
 	}
 

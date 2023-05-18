@@ -1,12 +1,17 @@
 {
     "name": "paul999/mention",
     "type": "phpbb-extension",
-    "description": "Mention a user by using @USERNAME",
-    "homepage": "https://www.phpbbextensions.io",
-    "version": "2.0.0",
-    "time": "2023-03-04",
+    "description": "A fork of paul999/mention with common-sense improvements -_-",
+    "homepage": "https://github.com/ftc2/phpbb-clickable-mentions",
+    "version": "2.0.0-00c",
+    "time": "2023-05-18",
     "license": "GPL-2.0-only",
     "authors": [
+        {
+            "name": "ftc2",
+            "homepage": "https://github.com/ftc2",
+            "role": "developer"
+        },
         {
             "name": "paul999",
             "email": "paul@phpbb.com",
@@ -15,12 +20,20 @@
         }
     ],
     "require": {
-        "php": "~7.1 || ~8.0"
+        "php": "~7.1 || ~8.0",
+        "phpbb/phpbb": ">=3.3.0RC1,<3.4.0@dev",
+        "composer/installers": "~1.0.0"
     },
     "extra": {
-        "display-name": "Simple mentions",
+        "display-name": "Clickable Mentions",
         "soft-require": {
             "phpbb/phpbb": ">=3.3.0RC1,<3.4.0@dev"
+        },
+        "version-check": {
+            "host": "raw.githubusercontent.com",
+            "directory": "/ftc2/phpbb-clickable-mentions/v2",
+            "filename": "version_check",
+            "ssl": true
         }
     },
     "require-dev": {
