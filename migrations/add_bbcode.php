@@ -32,8 +32,14 @@ class add_bbcode extends container_aware_migration
 		$install->install_bbcodes([
 			'mention' => [
 				'display_on_posting'	=> false,
-				'bbcode_match'		    => '[mention]{TEXT}[/mention]',
-				'bbcode_tpl'		    => '<em class="mention">@{TEXT}</em>',
+				'bbcode_match'		    => '[smention u={NUMBER?} g={NUMBER?}]{TEXT}[/smention]',
+				'bbcode_tpl' =>
+'<xsl:choose>
+	<xsl:when test="@u">
+		<a href="./memberlist.php?mode=viewprofile&u={@u}"><em class="mention">@{TEXT}</em></a>
+	</xsl:when>
+	<xsl:otherwise><em class="mention">@{TEXT}</em></xsl:otherwise>
+</xsl:choose>',
 			],
 		]);
 

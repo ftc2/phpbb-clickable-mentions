@@ -98,6 +98,7 @@ class main
 			$return[] = [
 				'key'       =>$row['username'],
 				'value'     => $row['username'],
+				'user_id'	=> $row['user_id'],
 			];
 		}
 		$this->db->sql_freeresult($result);
